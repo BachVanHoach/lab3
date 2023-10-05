@@ -75,7 +75,7 @@ def notification():
 
             for attendee in attendees:
                 subject = '{}: {}'.format(attendee.first_name, notification.subject)
-                send_email(attendee.email, subject, notification.message)
+                # send_email(attendee.email, subject, notification.message)
 
             notification.completed_date = datetime.utcnow()
             notification.status = 'Notified {} attendees'.format(len(attendees))
